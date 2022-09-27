@@ -15,7 +15,7 @@ function hideAbout() {
     about.classList.remove('open');
     marqueeTxt.style.display = "block";
     marqueeTxtAlt.style.display = "none";
-    body.style.overflow = "scroll";
+    body.style.overflowY = "auto";
   }
 
 
@@ -337,7 +337,7 @@ whatIsASuperfood.addEventListener("click", function () {
 function hideTwelve() {
   infoTwelve.style.display = "none";
   blockerTwelve.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 11
@@ -350,7 +350,7 @@ personEleven.addEventListener("click", function () {
 function hideEleven() {
   infoEleven.style.display = "none";
   blockerEleven.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 10
@@ -363,7 +363,7 @@ personTen.addEventListener("click", function () {
 function hideTen() {
   infoTen.style.display = "none";
   blockerTen.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 9
@@ -376,7 +376,7 @@ personNine.addEventListener("click", function () {
 function hideNine() {
   infoNine.style.display = "none";
   blockerNine.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 8
@@ -389,7 +389,7 @@ personEight.addEventListener("click", function () {
 function hideEight() {
   infoEight.style.display = "none";
   blockerEight.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 7
@@ -402,7 +402,7 @@ personSeven.addEventListener("click", function () {
 function hideSeven() {
   infoSeven.style.display = "none";
   blockerSeven.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 6
@@ -415,7 +415,7 @@ personSix.addEventListener("click", function () {
 function hideSix() {
   infoSix.style.display = "none";
   blockerSix.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 5
@@ -428,7 +428,7 @@ personFive.addEventListener("click", function () {
 function hideFive() {
   infoFive.style.display = "none";
   blockerFive.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 
@@ -442,7 +442,7 @@ personFour.addEventListener("click", function () {
 function hideFour() {
   infoFour.style.display = "none";
   blockerFour.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 3
@@ -455,7 +455,7 @@ personThree.addEventListener("click", function () {
 function hideThree() {
   infoThree.style.display = "none";
   blockerThree.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 2
@@ -468,7 +468,7 @@ personTwo.addEventListener("click", function () {
 function hideTwo() {
   infoTwo.style.display = "none";
   blockerTwo.style. display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // 1
@@ -481,7 +481,7 @@ personOne.addEventListener("click", function () {
 function hideOne() {
   infoOne.style.display = "none";
   blockerOne.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 // Speaker
@@ -494,7 +494,7 @@ speaker.addEventListener("click", function () {
 function hideBubble() {
   infoBubble.style.display = "none";
   blockerBubble.style.display = "none";
-  body.style.overflow = "scroll";
+  body.style.overflowY = "auto";
 }
 
 

@@ -7,6 +7,11 @@
 a {
     color: #93beff;
     text-decoration: none;
+    cursor: inherit
+}
+
+button {
+    cursor: inherit
 }
 
 
@@ -20,13 +25,70 @@ a {
     100% { transform: translateX(0%); }
 }
 
+@keyframes slidein {
+    0%   {
+        transform: translate(-0.5%, 0%);
+    }
+    25% {
+        transform: translate(0%, -0.5%);
+    }
+    50% {
+        transform: translate(0.5%, 0%);
+    }
+    75% {
+        transform: translate(0%, 0.5%);
+    }
+    100% {
+        transform: translate(-0.5%, 0%);
+    }
+  }
+
+  @keyframes updown {
+    0%   {
+        transform: translateY(-0.5%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-0.5%);
+    }
+  }
+
+  @keyframes leftright {
+    0%   {
+        transform: translateX(-0.5%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-0.5%);
+  }
+}
+
+@keyframes shake {
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+    }
+
+
+@keyframes zoom-in-out {
+    0%{ transform: scale(1); }
+    50%{ transform: scale(1.2); }
+    100%{ transform: scale(1); }
+    }
+  
+
 body {
     width: 100vw;
     height: 100vh;
 
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
    
-    background-color: #00280f; 
+    background-color: #000000; 
 
     /* Fonts */
 
@@ -37,6 +99,8 @@ font-style: normal;
     font-size: 23px;
     font-weight: 400;
     line-height: 1.5;
+
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAFrbCBXAAAACXBIWXMAAC4jAAAuIwF4pT92AAAFQ0lEQVR4nO1dv2sUQRR+uQuJipFUSVCjiGCRGDGNZSohdvon2FgYGw0o+A9opaWVjf+FaURT2EaCaZQUioiVSALCoWFlz5tjbnZ+vDf7Zmb3dj847rI3+/LtN7/evHmTTGRZBlh0RLmN5+ecd3XkH27dm7ffkNMQr5sbc9ndZ4uZfE1+jVg+fXEavu/3zJTUu3PLS1Mr2YPrD/vv8ncFNZanrxSs7vV2JwoPSFLDq/DCmX19aZ1ES1Mr99WH0z6glQKmmocWReEXm18nUA9lsj4sKFu683SxUHhSvfDu8Wz/ffPNo2xr+/WwpkaeWlelMKhWdC35FRR81tZPFa5pa0ZwFYX6kBuyqYtQX4XfLleOqUZd0D6SMJz32bzvUo0bW3BuWBilMrd2C5nx55fzI9+NVAzFKGha4vrajeHnvPnqfoHVqKlp6yAbJg1OWAQxihq/bDLoKow0B2IRXlPM6Ew2CoPJuqzxgqa5UZ+uKaPAVEz+MOiePqwLRnNmwrDTu8AaVRn7GNYaFTr6GraOp+Iz69CXGxYzNSCHPadRXZ+PNp6qRo21Txmgl6evXEUZJWInhNERsBhFa2prhy6gmObemsn59ppOXK2g1BylGi/loVQF2nrKxxGuOZALKEdSwNev5oCz6tX5OhVpVBtVfX/fdUAZoDuTugISn2Ewi4cmTOr1MlmZICgPEIIweXhSXRbQEO50ABYu0NedwYjK5CCwwl4Dvo6s7L9hQJ2kvWcmQdZGUPYLVQg/EZCkvYlSXEEdYZkoIMh6EaWQpMBGNohL6gubAJUiakNL1AfsbdRmMF9jyFFhDpvA4eHrOoAgur11gLIRdBxVQR2yos1MsVHvxV0Vgd7BSg3rxkvKVacKa9VXaX1vjZL+PjyCEzPd4bXKrut1aqYii+71Yl2UqjlYicrqyZsRkGB0QCmqrjIVdd+GJCjgFdKBBGEddBtVqz52UygVe4KI8SfyXK9TFpR2y0lQAE3UNgLEIOvtPenIyte4yZZy81Sy6jVOsiSiuo7iIssFlrAjSKOBK6rnu9VWm7BjIaOMChNBU8hRRPHyVSuFrFdnEm2VqiIoD0BZYgeNj9Y+kKsGcaFOgVwX0cqs610PTyYaKizuQhvI5UZLlBstUW6QiZbJiCqDyigaZGYyGb22dtJr6wYDVkWPHe/Ap487/Vw2CuHg2zex9pgg1IYYFpSO2dwNMWr6Phbtzl1TUZupvi5AxUk4jpA1BV45mTJagUfBFhsVaLrALDHco78ZdCf1OjZN4NIprjJ0ycMymiBuKbfJtDEKDRa3tB+q5uObhAWDuOMmLItj7zrkgPkOxkRctpWSOqZihDV9X2dhWZeePhOVTdw6Csu+lreJCg0QNkhwxJYYITCuwgaLNtlWVBhh5XKzc5OVSbF1IWj4zrVMpQorjkMKVFHY4PFQTPYYVdgqDwVRAszYlDyXsMhspVd7vd3bJIKMiBaxp+Q5vn8yA38Ou4iSeMTaWo66BWITtWyunApdxpeMUAInF5RbSBNMAnMLG32TDnOyHQMfUSGCsNEF5c7iowprGwo4RI0qaMyUSN3f9cKiFgkEqfJLPbG619v94HNruy+vx47PTRBL0Jq1zj58ObctlBmtoMxoBWVGKygzWkGZEUXQVIcIysCXc9tCNQj+d3U5UJdWWpZnkpRwjNMszmn8+PYFDn797H++dHm1/449u0EFR6Un6fIY4kK0hbPnodP9H73PT+2A8n9DYnLCIPmhhdTL0toHmG2IJW7I8byyx2q4xR3LTTou2P79U2pu7cEvTgDAP39Mbn82ByylAAAAAElFTkSuQmCC),auto;
 
 }
 
@@ -76,7 +140,7 @@ header p {
     font-weight: 600;
     border: none;
     text-decoration: none;
-    cursor: pointer;
+    
 }
 
 .marquee-btn {
@@ -86,7 +150,7 @@ header p {
     font-weight: 400;
     border: none;
     text-decoration: none;
-    cursor: pointer;
+    
 }
 
 .marquee-txt {
@@ -105,7 +169,7 @@ header p {
     text-decoration: none;
     padding-left: 30px;
     padding-top: 0px;
-    cursor: pointer;
+    
 }
 
 .hide-btn img {
@@ -195,7 +259,7 @@ header p {
 }
 
 .personone {
-    cursor: pointer;
+    
     position: absolute;
     z-index: 10;
 }
@@ -269,7 +333,7 @@ header p {
 }
 
 .pone {
-    cursor: pointer;
+    
 }
 
 #person1-copy {
@@ -311,8 +375,21 @@ header p {
 /* SVG PERSONEN */
 
 .info-image {
-    cursor: pointer;
+    
+    /* animation: shake 5s linear 0s infinite normal; */
 }
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .info-boxes>div::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .info-boxes>div {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* background-color:#ebdaff; */
+  } 
 
 .info-text,
 .person12 .text,
@@ -355,7 +432,7 @@ header p {
 .person2,
 .person1,
 .speaker {
-    cursor: pointer;
+    
 }
 
 .ellipse1,
@@ -382,7 +459,7 @@ header p {
 .infoOne
  {
     display: none;
-    background: #ffffff;
+    background: #fbe5fb;
     width: 60%;
     height: 80%;
     position: absolute;
