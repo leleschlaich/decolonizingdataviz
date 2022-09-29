@@ -25,61 +25,33 @@ button {
     100% { transform: translateX(0%); }
 }
 
-@keyframes slidein {
-    0%   {
-        transform: translate(-0.5%, 0%);
-    }
-    25% {
-        transform: translate(0%, -0.5%);
-    }
-    50% {
-        transform: translate(0.5%, 0%);
-    }
-    75% {
-        transform: translate(0%, 0.5%);
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
     }
     100% {
-        transform: translate(-0.5%, 0%);
-    }
-  }
-
-  @keyframes updown {
-    0%   {
-        transform: translateY(-0.5%);
-    }
-    50% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-0.5%);
-    }
-  }
-
-  @keyframes leftright {
-    0%   {
-        transform: translateX(-0.5%);
-    }
-    50% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-0.5%);
-  }
+        opacity: 1;
+     }
 }
 
 @keyframes shake {
-    0% { transform: rotate(-10deg); }
-    50% { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
     }
 
-
-@keyframes zoom-in-out {
-    0%{ transform: scale(1); }
-    50%{ transform: scale(1.2); }
-    100%{ transform: scale(1); }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
     }
-  
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
 
 body {
     width: 100vw;
@@ -87,8 +59,8 @@ body {
 
     overflow-y: auto;
     overflow-x: hidden;
-   
-    background-color: #000000; 
+
+    background-color: #000000;
 
     /* Fonts */
 
@@ -140,7 +112,7 @@ header p {
     font-weight: 600;
     border: none;
     text-decoration: none;
-    
+
 }
 
 .marquee-btn {
@@ -150,7 +122,7 @@ header p {
     font-weight: 400;
     border: none;
     text-decoration: none;
-    
+
 }
 
 .marquee-txt {
@@ -169,7 +141,7 @@ header p {
     text-decoration: none;
     padding-left: 30px;
     padding-top: 0px;
-    
+
 }
 
 .hide-btn img {
@@ -213,12 +185,12 @@ header p {
 }
 
 .about-header {
-    font-weight: 600;   
+    font-weight: 600;
     padding-bottom: 20px;
 }
 
 .about-subheader {
-    font-weight: 600;   
+    font-weight: 600;
     padding-bottom: 20px;
 }
 
@@ -238,7 +210,7 @@ header p {
     bottom: 0;
     right: 0;
     width: 100%;
-	content: ' ';	
+	content: ' ';
     background: rgba(0, 0, 0, 0.614);
 }
 
@@ -259,7 +231,7 @@ header p {
 }
 
 .personone {
-    
+
     position: absolute;
     z-index: 10;
 }
@@ -280,18 +252,18 @@ header p {
 
 .info-one.open {
     display: block;
-   
+
 }
 
 .info-contents {
     padding: 20px;
-    
+
 }
 
 .info-contents img {
     width: 100%;
-    
-    
+
+
 }
 
 .infoOne .creditline,
@@ -299,14 +271,14 @@ header p {
 .infoSix .creditline,
 .infoSeven .creditline {
     font-size: 11px;
-    
-    
+
+
 }
 
 .info-contents p {
     font-size: 16px;
     width: 80%;
-   
+
     margin: 0 auto;
 }
 
@@ -314,8 +286,8 @@ header p {
     font-size: 16px;
     width: 80%;
     margin: 0 auto;
-   
-   
+
+
 }
 
 #blocker {
@@ -330,10 +302,6 @@ header p {
 .txt-one {
     opacity: 0;
     transition: 0.2s;
-}
-
-.pone {
-    
 }
 
 #person1-copy {
@@ -375,21 +343,135 @@ header p {
 /* SVG PERSONEN */
 
 .info-image {
-    
     /* animation: shake 5s linear 0s infinite normal; */
+    animation: shake 2s cubic-bezier(.36,.07,.19,.97) both infinite;
 }
 
- /* Hide scrollbar for Chrome, Safari and Opera */
- .info-boxes>div::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .info-boxes>div {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    /* background-color:#ebdaff; */
-  } 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.info-boxes>div::-webkit-scrollbar {
+display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.info-boxes>div {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+/* background-color:#ebdaff; */
+}
+
+.person12,
+.person11,
+.person10,
+.person9,
+.person8,
+.person7,
+.person6,
+.person5,
+.person4,
+.person3,
+.person2,
+.person1,
+#what-is-a-superfood {
+    animation: fadeInAnimation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.person7 {
+    animation-delay: .5s;
+}
+
+.person8 {
+    animation-delay: 1s;
+}
+
+.person4 {
+    animation-delay: 1.5s;
+}
+
+.person6 {
+    animation-delay: 2s;
+}
+
+.person1 {
+    animation-delay: 2.5s;
+}
+
+.person10 {
+    animation-delay: 3s;
+}
+
+.person11 {
+    animation-delay: 3.5s;
+}
+
+.person9 {
+    animation-delay: 4s;
+}
+
+.person2 {
+    animation-delay: 4.5s;
+}
+
+.person5 {
+    animation-delay: 5s;
+}
+
+#what-is-a-superfood {
+    animation-delay: 5.5s;
+}
+
+.person3 {
+    animation-delay: 6s;
+}
+
+
+
+.person7 .info-image {
+    animation-delay: .5s;
+}
+
+.person8 .info-image {
+    animation-delay: 1s;
+}
+
+.person4 .info-image {
+    animation-delay: 1.5s;
+}
+
+.person6 .info-image {
+    animation-delay: 2s;
+}
+
+.person1 .info-image {
+    animation-delay: 2.5s;
+}
+
+.person10 .info-image {
+    animation-delay: 3s;
+}
+
+.person11 .info-image {
+    animation-delay: 3.5s;
+}
+
+.person9 .info-image {
+    animation-delay: 4s;
+}
+
+.person2 .info-image {
+    animation-delay: 4.5s;
+}
+
+.person5 .info-image {
+    animation-delay: 5s;
+}
+
+#what-is-a-superfood .info-image {
+    animation-delay: 5.5s;
+}
+
+.person3 .info-image {
+    animation-delay: 6s;
+}
 
 .info-text,
 .person12 .text,
@@ -417,22 +499,6 @@ header p {
 .person1 .ellipse {
     opacity: 0;
     transition: 0.3s;
-}
-
-.person12,
-.person11,
-.person10,
-.person9,
-.person8,
-.person7,
-.person6,
-.person5,
-.person4,
-.person3,
-.person2,
-.person1,
-.speaker {
-    
 }
 
 .ellipse1,
@@ -484,21 +550,21 @@ header p {
     z-index: 10;
     border-radius: 30px;
     border: solid 2px #000000;
-    
+
 }
 
 .infoBubble .info-contents {
     width: 80%;
     height: 60%;
     margin: 40px auto 0 auto;
-    
+
 }
 
 .infoBubble .button-div {
     position: fixed;
     top: 20px;
     left: 0px;
-    
+
 }
 
  .blocker12,
@@ -524,9 +590,9 @@ header p {
     right: 0;
     width: 100vw;
     height: 100vh;
-	content: ' ';	
+	content: ' ';
     background: rgba(0, 0, 0, 0.69);
-    
+
 }
 
 
@@ -541,7 +607,7 @@ header p {
         background-image: url(assets/Hintergrund.jpg);
         background-repeat: no-repeat;
         background-position: center;
-        
+
     }
 
     .mobile-blocker {
@@ -554,7 +620,7 @@ header p {
 }
 
 @media (max-width: 500px) {
-  
+
     .mobile-blocker-div p {
         font-size: 3.5vw;
         padding: 40px;

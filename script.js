@@ -27,32 +27,32 @@ function hideAbout() {
 //  */
 
 // (function emojiCursor() {
-  
+
 //   var possibleEmoji = ["🫐"]
 //   var width = window.innerWidth;
 //   var height = window.innerHeight;
 //   var cursor = {x: width/2, y: width/2};
 //   var particles = [];
-  
+
 //   function init() {
 //     bindEvents();
 //     loop();
 //   }
-  
+
 //   // Bind events that are needed
 //   function bindEvents() {
 //     document.addEventListener('mousemove', onMouseMove);
 //     document.addEventListener('touchmove', onTouchMove);
 //     document.addEventListener('touchstart', onTouchMove);
-    
+
 //     window.addEventListener('resize', onWindowResize);
 //   }
-  
+
 //   function onWindowResize(e) {
 //     width = window.innerWidth;
 //     height = window.innerHeight;
 //   }
-  
+
 //   function onTouchMove(e) {
 //     if( e.touches.length > 0 ) {
 //       for( var i = 0; i < e.touches.length; i++ ) {
@@ -60,27 +60,27 @@ function hideAbout() {
 //       }
 //     }
 //   }
-  
-//   function onMouseMove(e) {    
+
+//   function onMouseMove(e) {
 //     cursor.x = e.clientX;
 //     cursor.y = e.clientY;
-    
+
 //     addParticle( cursor.x, cursor.y, possibleEmoji[Math.floor(Math.random()*possibleEmoji.length)]);
 //   }
-  
+
 //   function addParticle(x, y, character) {
 //     var particle = new Particle();
 //     particle.init(x, y, character);
 //     particles.push(particle);
 //   }
-  
+
 //   function updateParticles() {
-    
+
 //     // Updated
 //     for( var i = 0; i < particles.length; i++ ) {
 //       particles[i].update();
 //     }
-    
+
 //     // Remove dead particles
 //     for( var i = particles.length -1; i >= 0; i-- ) {
 //       if( particles[i].lifeSpan < 0 ) {
@@ -88,18 +88,18 @@ function hideAbout() {
 //         particles.splice(i, 1);
 //       }
 //     }
-    
+
 //   }
-  
+
 //   function loop() {
 //     requestAnimationFrame(loop);
 //     updateParticles();
 //   }
-  
+
 //   /**
 //    * Particles
 //    */
-  
+
 //   function Particle() {
 
 //     this.lifeSpan = 120; //ms
@@ -119,169 +119,166 @@ function hideAbout() {
 //         x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
 //         y: 1
 //       };
-      
+
 //       this.position = {x: x - 10, y: y - 20};
 
 //       this.element = document.createElement('span');
 //       this.element.innerHTML = character;
 //       applyProperties(this.element, this.initialStyles);
 //       this.update();
-      
+
 //       document.body.appendChild(this.element);
 //     };
-    
+
 //     this.update = function() {
 //       this.position.x += this.velocity.x;
 //       this.position.y += this.velocity.y;
 //       this.lifeSpan--;
-      
+
 //       this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
 //     }
-    
+
 //     this.die = function() {
 //       this.element.parentNode.removeChild(this.element);
 //     }
-    
+
 //   }
-  
+
 //   /**
 //    * Utils
 //    */
-  
+
 //   // Applies css `properties` to an element.
 //   function applyProperties( target, properties ) {
 //     for( var key in properties ) {
 //       target.style[ key ] = properties[ key ];
 //     }
 //   }
-  
+
 //   init();
 // })();
 // // HOVER
 
 const personOne = document.querySelector('.person1');
 const personOnetxt = document.querySelector('.person1 .text');
-const personOneell = document.querySelector('.person1 .ellipse');
+const personOneImg = document.querySelector('.person1 .info-image');
 
 const personTwo = document.querySelector('.person2');
 const personTwotxt = document.querySelector('.person2 .text');
+const personTwoImg = document.querySelector('.person2 .info-image');
 
 const personThree = document.querySelector('.person3');
 const personThreetxt = document.querySelector('.person3 .text');
-const personThreeell = document.querySelector('.person3 .ellipse');
+const personThreeImg = document.querySelector('.person3 .info-image');
 
 const personFour = document.querySelector('.person4');
 const personFourtxt = document.querySelector('.person4 .text');
-const personFourell = document.querySelector('.person4 .ellipse');
+const personFourImg = document.querySelector('.person4 .info-image');
 
 const personFive = document.querySelector('.person5');
 const personFivetxt = document.querySelector('.person5 .text');
-const personFiveell = document.querySelector('.person5 .ellipse');
+const personFiveImg = document.querySelector('.person5 .info-image');
 
 const personSix = document.querySelector('.person6');
 const personSixtxt = document.querySelector('.person6 .text');
-const personSixell = document.querySelector('.person6 .ellipse');
+const personSixImg = document.querySelector('.person6 .info-image');
 
 const personSeven = document.querySelector('.person7');
 const personSeventxt = document.querySelector('.person7 .text');
-const personSevenell = document.querySelector('.person7 .ellipse');
+const personSevenImg = document.querySelector('.person7 .info-image');
 
 const personEight = document.querySelector('.person8');
 const personEighttxt = document.querySelector('.person8 .text');
-const personEightell = document.querySelector('.person8 .ellipse');
+const personEightImg = document.querySelector('.person8 .info-image');
 
 const personNine = document.querySelector('.person9');
 const personNinetxt = document.querySelector('.person9 .text');
-const personNineell = document.querySelector('.person9 .ellipse');
+const personNineImg = document.querySelector('.person9 .info-image');
 
 const personTen = document.querySelector('.person10');
 const personTentxt = document.querySelector('.person10 .text');
-const personTenell = document.querySelector('.person10 .ellipse');
-const ellOne = document.querySelector('.ellipse1');
-const ellTwo = document.querySelector('.ellipse2');
-const ellThree = document.querySelector('.ellipse3');
+const personTenImg = document.querySelector('.person10 .info-image');
 
 const personEleven = document.querySelector('.person11');
 const personEleventxt = document.querySelector('.person11 .text');
-const personElevenell = document.querySelector('.person11 .ellipse');
+const personElevenImg = document.querySelector('.person11 .info-image');
 
 const whatIsASuperfood = document.querySelector('#what-is-a-superfood');
 const whatIsASuperfoodText = document.querySelector('#what-is-a-superfood .text');
+const whatIsASuperfoodImg = document.querySelector('#what-is-a-superfood .info-image');
 
 
 
 // 1
 personOne.addEventListener("mouseover", function () {
   personOnetxt.style.opacity = "1";
-  personOneell.style.opacity = "1";
+  personOneImg.style.animationPlayState = 'paused';
 });
 
 // 2
 personTwo.addEventListener("mouseover", function () {
   personTwotxt.style.opacity = "1";
+  personTwoImg.style.animationPlayState = 'paused';
 });
 
 // 3
 personThree.addEventListener("mouseover", function () {
   personThreetxt.style.opacity = "1";
-  personThreeell.style.opacity = "1";
+  personThreeImg.style.animationPlayState = 'paused';
 });
 
 // 4
 personFour.addEventListener("mouseover", function () {
   personFourtxt.style.opacity = "1";
-  personFourell.style.opacity = "1";
+  personFourImg.style.animationPlayState = 'paused';
 });
 
 // 5
 personFive.addEventListener("mouseover", function () {
   personFivetxt.style.opacity = "1";
-  personFiveell.style.opacity = "1";
+  personFiveImg.style.animationPlayState = 'paused';
 });
 
 // 6
 personSix.addEventListener("mouseover", function () {
   personSixtxt.style.opacity = "1";
-  personSixell.style.opacity = "1";
+  personSixImg.style.animationPlayState = 'paused';
 });
 
 // 7
 personSeven.addEventListener("mouseover", function () {
   personSeventxt.style.opacity = "1";
-  personSevenell.style.opacity = "1";
+  personSevenImg.style.animationPlayState = 'paused';
 });
 
 // 8
 personEight.addEventListener("mouseover", function () {
   personEighttxt.style.opacity = "1";
-  personEightell.style.opacity = "1";
+  personEightImg.style.animationPlayState = 'paused';
 });
 
 // 9
 personNine.addEventListener("mouseover", function () {
   personNinetxt.style.opacity = "1";
-  personNineell.style.opacity = "1";
+  personNineImg.style.animationPlayState = 'paused';
 });
 
 // 10
 personTen.addEventListener("mouseover", function () {
   personTentxt.style.opacity = "1";
-  personTenell.style.opacity = "1";
-  ellOne.style.opacity = "1";
-  ellTwo.style.opacity = "1";
-  ellThree.style.opacity = "1";
+  personTenImg.style.animationPlayState = 'paused';
 });
 
 // 11
 personEleven.addEventListener("mouseover", function () {
   personEleventxt.style.opacity = "1";
-  personElevenell.style.opacity = "1";
+  personElevenImg.style.animationPlayState = 'paused';
 });
 
 // 12
 whatIsASuperfood.addEventListener("mouseover", function () {
   whatIsASuperfoodText.style.opacity = "1";
-  console.log('hello')
+  whatIsASuperfoodImg.style.animationPlayState = 'paused';
 });
 
 
@@ -322,7 +319,6 @@ const blockerTwo = document.querySelector('.blocker2');
 const infoOne = document.querySelector('.infoOne');
 const blockerOne = document.querySelector('.blocker1');
 
-const speaker = document.querySelector('.speaker');
 const infoBubble = document.querySelector('.infoBubble');
 const blockerBubble = document.querySelector('.blockerBubble');
 
@@ -483,13 +479,6 @@ function hideOne() {
   blockerOne.style.display = "none";
   body.style.overflowY = "auto";
 }
-
-// Speaker
-speaker.addEventListener("click", function () {
-  infoBubble.style.display = "block";
-  body.style.overflow = "hidden";
-  blockerBubble.style.display = "block";
-});
 
 function hideBubble() {
   infoBubble.style.display = "none";
